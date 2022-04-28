@@ -18,7 +18,7 @@ Find a 4-byte prefix so that, a SHA256 hash of the prefix combined with the orig
   let strRandBytes = randByte.toString('hex');
   let concat = strRandBytes + str;
 
-  let sha256Concat = crypto.createHash('sha256').update(concat).digest('hex');
+  let sha256Concat = crypto.createHash('sha256').update(concat).digest('hex');g
 
   while (!((sha256Concat[60]=="c") && (sha256Concat[61]=="a") && (sha256Concat[62]=="f" ) && (sha256Concat[63]=="e"))) {
 
